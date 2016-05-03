@@ -43,7 +43,7 @@
 (defun to-list1 (lst) (cond
 			((null lst) nil )
 			((atom (car lst)) (cons (car lst) (to-list1 (cdr lst))))
-			( 1 (append (to-list1 (car lst)) (to-list1 (cdr lst))))))
+			( T (append (to-list1 (car lst)) (to-list1 (cdr lst))))))
 
 ;; функция-обертка для макроса, позволяющая задать любой список-функция и обработать его макросом
 ;; для преобразования в лисп-функцию 
